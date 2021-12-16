@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AddNewBookVC.swift
 //  BookLibrary
 //
 //  Created by Pavel Isakov on 16.12.2021.
@@ -7,13 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AddNewBookVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        title = "Add new book"
     }
-
-
+    
 }
-
