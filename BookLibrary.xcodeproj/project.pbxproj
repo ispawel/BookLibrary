@@ -14,6 +14,7 @@
 		E211A702276B38BD00E5D1F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E211A700276B38BD00E5D1F2 /* LaunchScreen.storyboard */; };
 		E211A70A276B421B00E5D1F2 /* AddNewBookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E211A709276B421B00E5D1F2 /* AddNewBookVC.swift */; };
 		E211A70C276B422F00E5D1F2 /* BookListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E211A70B276B422F00E5D1F2 /* BookListVC.swift */; };
+		E2CE6DDC276DF71E004B3318 /* BookBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE6DDB276DF71E004B3318 /* BookBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E211A703276B38BD00E5D1F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E211A709276B421B00E5D1F2 /* AddNewBookVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBookVC.swift; sourceTree = "<group>"; };
 		E211A70B276B422F00E5D1F2 /* BookListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListVC.swift; sourceTree = "<group>"; };
+		E2CE6DDB276DF71E004B3318 /* BookBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				E211A6F7276B38B800E5D1F2 /* SceneDelegate.swift */,
 				E211A70B276B422F00E5D1F2 /* BookListVC.swift */,
 				E211A709276B421B00E5D1F2 /* AddNewBookVC.swift */,
+				E2CE6DDB276DF71E004B3318 /* BookBase.swift */,
 				E211A6FB276B38B800E5D1F2 /* Main.storyboard */,
 				E211A6FE276B38BD00E5D1F2 /* Assets.xcassets */,
 				E211A700276B38BD00E5D1F2 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E211A70A276B421B00E5D1F2 /* AddNewBookVC.swift in Sources */,
+				E2CE6DDC276DF71E004B3318 /* BookBase.swift in Sources */,
 				E211A6F6276B38B700E5D1F2 /* AppDelegate.swift in Sources */,
 				E211A6F8276B38B800E5D1F2 /* SceneDelegate.swift in Sources */,
 				E211A70C276B422F00E5D1F2 /* BookListVC.swift in Sources */,
