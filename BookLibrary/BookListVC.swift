@@ -9,14 +9,12 @@ import UIKit
 
 class BookListVC: UIViewController {
 
-    
     @IBOutlet weak var tableView: UITableView!{
     
-   
-    didSet{
-    tableView?.dataSource = self
-    tableView?.delegate = self
-    }
+        didSet{
+            tableView?.dataSource = self
+            tableView?.delegate = self
+        }
         
     }
     
@@ -37,6 +35,10 @@ class BookListVC: UIViewController {
     }
     
 
+    func delBook(<#parameters#>) -> <#return type#> {
+        <#function body#>
+    }
+    
 }
 
 
@@ -53,15 +55,17 @@ extension BookListVC:UITableViewDataSource, UITableViewDelegate{
     
     //заполение записей
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         var cell:UITableViewCell!
+        
         if  let dCell = tableView.dequeueReusableCell(withIdentifier: "dCell"){
             cell = dCell
         }else{
             cell = UITableViewCell()
         }
+        
         cell.textLabel?.text = BookBaseClass.shared.booksArray[indexPath.row].name
         return cell
-    
     }
     
     

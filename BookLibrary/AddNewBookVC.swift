@@ -7,15 +7,10 @@
 
 import UIKit
 
-
-
 struct KeysDefaults {
     static let keyBookName = "bookName"
     static let keyBookDate = "bookDate"
 }
-
-
-
 
 class AddNewBookVC: UIViewController {
 
@@ -76,11 +71,5 @@ class AddNewBookVC: UIViewController {
         bookDateTF.resignFirstResponder()
         }
     
-    
-    
+
 }
-
-
-
-
-
