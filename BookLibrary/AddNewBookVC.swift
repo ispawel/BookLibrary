@@ -17,7 +17,7 @@ class AddNewBookVC: UIViewController {
     let defaults = UserDefaults.standard
     
     @IBOutlet weak var bookNameTF: UITextField!
-    @IBOutlet weak var bookDateTF: UITextField!
+    @IBOutlet weak var bookDateLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
     
   
@@ -27,7 +27,6 @@ class AddNewBookVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Add new book"
-        bookDateTF.inputView = datePicker
         datePicker?.addTarget(self, action: #selector(AddNewBookVC.dateChanged(datePicker:)), for: .valueChanged)
         
         addTapGestureToHideKeyboard()
@@ -37,7 +36,7 @@ class AddNewBookVC: UIViewController {
     @objc func dateChanged(datePicker: UIDatePicker){
         let dateFormatted = DateFormatter()
         dateFormatted.dateFormat = "dd.MM.yyyy"
-        bookDateTF.text = dateFormatted.string(from: datePicker.date)
+        bookDateLabel.text = dateFormatted.string(from: datePicker.date)
         view.endEditing(true)
     }
 
@@ -45,13 +44,13 @@ class AddNewBookVC: UIViewController {
     @IBAction func addButton(_ sender: UIButton) {
       
         let bookName = bookNameTF.text!
-        let bookDate = bookDateTF.text!
+        let bookDate = bookDateLabel.text
         
         // проверка на присутвие данных
-        if !bookName.isEmpty && !bookDate.isEmpty {
+        if !bookName.isEmpty && bookDate != nil {
             
             // передача данных и их последущее сохраение
-            BookBaseClass.shared.saveBook(bookName: bookName, bookData: bookDate)
+            BookBaseClass.shared.saveBook(bookName: bookName, bookData: bookDate!)
             
             //переход на таблицу книг
             self.navigationController?.popViewController(animated: true)
@@ -68,7 +67,6 @@ class AddNewBookVC: UIViewController {
         }
     func tapGesture() {
         bookNameTF.resignFirstResponder()
-        bookDateTF.resignFirstResponder()
         }
     
 

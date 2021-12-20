@@ -68,12 +68,14 @@
                                     <action selector="addButton:" destination="iZD-Tc-o8W" eventType="touchUpInside" id="4Cd-Wk-R6d"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Book date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9SY-Vg-pu5">
-                                <rect key="frame" x="102" y="217" width="210" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnA-NV-tEk">
+                                <rect key="frame" x="71" y="217" width="273" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F7w-7x-r6v"/>
                         <color key="backgroundColor" red="0.85650155726037613" green="1" blue="0.95493248273690134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -82,7 +84,7 @@
                         <barButtonItem key="backBarButtonItem" title="Book list" id="7td-SN-2rt"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="bookDateTF" destination="9SY-Vg-pu5" id="ZNu-LI-8Cp"/>
+                        <outlet property="bookDateLabel" destination="nnA-NV-tEk" id="H64-CO-2c9"/>
                         <outlet property="bookNameTF" destination="eSq-cB-vcu" id="AAw-fE-fq5"/>
                         <outlet property="datePicker" destination="D0g-7l-4Rs" id="bOd-DA-ONc"/>
                     </connections>

@@ -35,9 +35,6 @@ class BookListVC: UIViewController {
     }
     
 
-    func delBook(<#parameters#>) -> <#return type#> {
-        <#function body#>
-    }
     
 }
 

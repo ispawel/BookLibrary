@@ -49,8 +49,5 @@ class BookBaseClass {
         booksArray.insert(book, at: 0)
         
     }
-    //метод удаления вниги
-    func delBookFunc(bookName: String){
-        booksArray.remove(at: <#T##Int#>)
-    }
+   
 }
