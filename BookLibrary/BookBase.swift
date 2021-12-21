@@ -33,6 +33,7 @@ class BookBaseClass {
                 return [BookBaseStruct]()
             }
         }
+       
         //сохранение книги
         set{
             if let data = try? PropertyListEncoder().encode(newValue){
@@ -49,5 +50,11 @@ class BookBaseClass {
         booksArray.insert(book, at: 0)
         
     }
+    
    
+    
+
+    
+    
+    
 }

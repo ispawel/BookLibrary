@@ -7,30 +7,28 @@
 
 import UIKit
 
-struct KeysDefaults {
-    static let keyBookName = "bookName"
-    static let keyBookDate = "bookDate"
-}
+//struct KeysDefaults {
+//    static let keyBookName = "bookName"
+//    static let keyBookDate = "bookDate"
+//}
 
 class AddNewBookVC: UIViewController {
-
+    
+    var delPicker = UIPickerView()
+    
+    
     let defaults = UserDefaults.standard
     
     @IBOutlet weak var bookNameTF: UITextField!
     @IBOutlet weak var bookDateLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
-    
-  
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Add new book"
         datePicker?.addTarget(self, action: #selector(AddNewBookVC.dateChanged(datePicker:)), for: .valueChanged)
-        
         addTapGestureToHideKeyboard()
-
     }
     
     @objc func dateChanged(datePicker: UIDatePicker){
@@ -49,17 +47,21 @@ class AddNewBookVC: UIViewController {
         // проверка на присутвие данных
         if !bookName.isEmpty && bookDate != nil {
             
-            // передача данных и их последущее сохраение
+            // передача данных и их последущее сохраение методом
             BookBaseClass.shared.saveBook(bookName: bookName, bookData: bookDate!)
             
             //переход на таблицу книг
             self.navigationController?.popViewController(animated: true)
         }
-        
     }
     
+//    @IBAction func trashButton(_ sender: UIButton){
+//        // delPicker.isHidden = false
+//        // bookListVC.selectBookForDelTF.isHidden = false
+//        // delPicker.numberOfRows(inComponent: BookBaseClass.shared.booksArray.count)
+//    }
     
-   
+    
     // метод скрытия клавиатуры
     func addTapGestureToHideKeyboard() {
             let tapGesture = UITapGestureRecognizer(target: view, action: #selector(view.endEditing))
@@ -68,6 +70,6 @@ class AddNewBookVC: UIViewController {
     func tapGesture() {
         bookNameTF.resignFirstResponder()
         }
-    
-
 }
+
+
