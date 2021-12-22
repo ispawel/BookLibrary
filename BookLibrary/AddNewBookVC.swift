@@ -55,12 +55,6 @@ class AddNewBookVC: UIViewController {
         }
     }
     
-//    @IBAction func trashButton(_ sender: UIButton){
-//        // delPicker.isHidden = false
-//        // bookListVC.selectBookForDelTF.isHidden = false
-//        // delPicker.numberOfRows(inComponent: BookBaseClass.shared.booksArray.count)
-//    }
-    
     
     // метод скрытия клавиатуры
     func addTapGestureToHideKeyboard() {

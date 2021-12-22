@@ -54,7 +54,7 @@ class BookListVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
     //передача выбранного значения пикера в текстовое поле
     @objc func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectBookForDelTF.text = bookArrayTitleForPicker[row]
+        selectBookForDelTF.text = bookArrayTitleForPicker[row].name
         selectBookForDelTF.resignFirstResponder()
     }
     
@@ -69,21 +69,13 @@ class BookListVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
     //кнопка удаления выбранной записи
     @IBAction func delButton(_ sender: UIButton) {
-        
+        BookBaseClass.shared.delBook()
+
     }
 
     
 }
   
-
-
-
-
-
-
-
-
-
 
 
 
