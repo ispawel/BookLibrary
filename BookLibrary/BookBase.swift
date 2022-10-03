@@ -11,23 +11,14 @@ class BookBaseClass {
     
     let defaults = UserDefaults.standard
     
-    
     static let shared = BookBaseClass()
-    
-    
-    
     struct BookBaseStruct:Codable {
         var bookName: String
         var bookDate: String
         var name: String{
-        return "\(bookName)     \(bookDate)"
-            
+        return "\(bookName)     \(bookDate)"        
         }
     }
-    
-    
-    
-    
     //массив книг
     var booksArray: [BookBaseStruct]{
         
@@ -39,28 +30,21 @@ class BookBaseClass {
                 return [BookBaseStruct]()
             }
         }
-       
         //сохранение книги
         set{
             if let data = try? PropertyListEncoder().encode(newValue){
                 defaults.set(data, forKey: "booksArray")
             }
-        }
-       
-        
+        }   
     }
     
     func delBook(){
         defaults.removeObject(forKey: "booksArray")
-    }
-    
-    
+    }  
     //добавление книги в массив
     func saveBook(bookName: String, bookData: String){
         
         let book = BookBaseStruct(bookName: bookName, bookDate: bookData)
         booksArray.insert(book, at: 0)
-    }
-    
-    
+    }   
 }
