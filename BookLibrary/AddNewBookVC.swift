@@ -15,15 +15,12 @@ import UIKit
 class AddNewBookVC: UIViewController {
     
     var delPicker = UIPickerView()
-    
-    
     let defaults = UserDefaults.standard
     
     @IBOutlet weak var bookNameTF: UITextField!
     @IBOutlet weak var bookDateLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Add new book"
@@ -38,9 +35,7 @@ class AddNewBookVC: UIViewController {
         view.endEditing(true)
     }
 
-
     @IBAction func addButton(_ sender: UIButton) {
-      
         let bookName = bookNameTF.text!
         let bookDate = bookDateLabel.text
         
@@ -54,7 +49,6 @@ class AddNewBookVC: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }
     }
-    
     
     // метод скрытия клавиатуры
     func addTapGestureToHideKeyboard() {
